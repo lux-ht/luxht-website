@@ -1,0 +1,12 @@
+# LUXHT Robots.txt
+# https://luxht.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://luxht.com/sitemap.xml
+
+# Disallow admin and build files
+Disallow: /src/
+Disallow: /node_modules/
