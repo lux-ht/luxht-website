@@ -191,14 +191,15 @@ export function injectFooterStyles() {
     /* Contact */
     .footer-contact-info {
       display: flex;
-      flex-direction: column;
-      gap: var(--space-5);
+      flex-direction: row;
+      flex-wrap: wrap;
+      gap: var(--space-4) var(--space-8);
     }
     
     .contact-item {
       display: flex;
-      flex-direction: column;
-      gap: var(--space-1);
+      align-items: center;
+      gap: var(--space-3);
     }
     
     .contact-label {
@@ -207,6 +208,7 @@ export function injectFooterStyles() {
       letter-spacing: var(--tracking-wider);
       text-transform: uppercase;
       color: var(--gold-dark);
+      min-width: 80px;
     }
     
     .contact-item p,
@@ -214,6 +216,7 @@ export function injectFooterStyles() {
       font-size: var(--text-sm);
       color: var(--text-secondary);
       line-height: var(--leading-relaxed);
+      margin: 0;
     }
     
     .contact-item a:hover {
@@ -284,6 +287,16 @@ export function injectFooterStyles() {
       
       .footer-contact-col {
         grid-column: span 2;
+      }
+
+      .footer-contact-info {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: var(--space-6) var(--space-8);
+      }
+      
+      .contact-item {
+        min-width: fit-content;
       }
       
       .footer-bottom-inner {
