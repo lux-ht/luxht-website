@@ -13,6 +13,7 @@ export default defineConfig({
         contact: resolve(__dirname, 'pages/contact.html'),
         bookOnline: resolve(__dirname, 'pages/book-online.html'),
         quickCash: resolve(__dirname, 'pages/quick-cash.html'),
+        insights: resolve(__dirname, 'pages/insights.html'),
       },
     },
   },
