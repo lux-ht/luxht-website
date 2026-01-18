@@ -128,7 +128,7 @@ export function injectFooterStyles() {
     }
     
     .footer-logo-img {
-      height: 160px;
+      height: 100px;
       width: auto;
       object-fit: contain;
     }
@@ -269,12 +269,21 @@ export function injectFooterStyles() {
       }
       
       .footer-grid {
-        grid-template-columns: 1fr;
-        gap: var(--space-8);
+        grid-template-columns: repeat(2, 1fr);
+        gap: var(--space-8) var(--space-4);
       }
       
       .footer-brand {
-        grid-column: span 1;
+        grid-column: span 2;
+        text-align: left;
+      }
+
+      .footer-logo {
+        margin-left: 0;
+      }
+      
+      .footer-contact-col {
+        grid-column: span 2;
       }
       
       .footer-bottom-inner {

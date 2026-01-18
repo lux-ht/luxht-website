@@ -418,12 +418,13 @@ function injectHomeStyles() {
     @media (max-width: 768px) {
       .hero {
         min-height: auto;
-        padding-top: 100px;
+        padding-top: 140px;
         padding-bottom: var(--space-8);
       }
       
       .hero-content {
         text-align: center;
+        margin-top: var(--space-4);
         margin-bottom: var(--space-12);
       }
       
