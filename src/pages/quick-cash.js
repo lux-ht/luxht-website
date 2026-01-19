@@ -208,6 +208,20 @@ function injectQuickCashStyles() {
       .form-row {
         grid-template-columns: 1fr;
       }
+
+      /* Why Choose Us section - mobile fix */
+      .benefits .section-header {
+        grid-template-columns: 1fr !important;
+        text-align: center !important;
+      }
+
+      .benefits .section-header img {
+        height: auto !important;
+        max-height: 250px;
+        width: 100% !important;
+        object-fit: contain !important;
+        margin-top: var(--space-6);
+      }
     }
   `;
   document.head.appendChild(styles);
