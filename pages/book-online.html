@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Book Online | LUXHT | Schedule Your Consultation</title>
+    <title>Project Discovery | LUXHT | Start Your Renovation</title>
     <meta name="description"
         content="Schedule your complimentary consultation with LUXHT. Whether it's a quick refresh or a full transformation, we deliver results that feel luxurious, timeless, and tailored to how you live.">
 
@@ -38,47 +38,72 @@
         <section class="page-hero section-champagne">
             <div class="container">
                 <div class="page-hero-content reveal text-center">
-                    <span class="section-label">Schedule Online</span>
-                    <h1>Book Your <span class="gold-gradient">Consultation</span></h1>
-                    <p class="lead">Take the first step toward your luxury home transformation with a complimentary
-                        design consultation.</p>
+                    <span class="section-label">Project Discovery</span>
+                    <h1>Start Your <span class="gold-gradient">Transformation</span></h1>
+                    <p class="lead">Connect with our design team to begin the journey of realizing your luxury home
+                        vision.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Booking Options -->
+        <!-- Communication Options -->
         <section class="booking-options section-white section">
             <div class="container">
-                <div class="booking-grid grid grid-2 stagger">
+                <div class="communication-grid grid grid-2 stagger">
 
-                    <div class="booking-card luxury-card-gold reveal text-center">
-                        <div class="booking-icon gold-text">◆</div>
-                        <h3>Design Consultation</h3>
-                        <p>Meet with our design team to discuss your vision, explore possibilities, and receive expert
-                            recommendations for your renovation project.</p>
-                        <ul class="booking-features">
-                            <li>✓ 60-minute in-depth consultation</li>
-                            <li>✓ Design recommendations</li>
-                            <li>✓ Budget guidance</li>
-                            <li>✓ Project timeline overview</li>
-                            <li>✓ Complimentary</li>
-                        </ul>
-                        <a href="/pages/contact.html" class="btn-gold">Schedule Consultation</a>
+                    <!-- Direct Contact -->
+                    <div class="booking-card luxury-card reveal text-center">
+                        <div class="booking-icon gold-text">✦</div>
+                        <h3>Speak with us Directly</h3>
+                        <p>For immediate assistance or to discuss your vision directly with our team, please call or
+                            text us.</p>
+                        <div class="cta-buttons vertical-buttons">
+                            <a href="tel:4077207476" class="btn-gold full-width">Call (407) 720-7476</a>
+                            <a href="sms:4077207476?body=I'm%20interested%20in%20discussing%20a%20renovation%20project..."
+                                class="btn-outline-gold full-width">Text Us</a>
+                            <a href="mailto:info@luxht.com?subject=Project%20Inquiry" class="btn-link full-width">Email
+                                Us</a>
+                        </div>
                     </div>
 
-                    <div class="booking-card luxury-card reveal text-center">
-                        <div class="booking-icon gold-text">◆</div>
-                        <h3>Project Discovery</h3>
-                        <p>Already have a clear vision? Let's discuss the specifics of your project and create a
-                            detailed plan to bring it to life.</p>
-                        <ul class="booking-features">
-                            <li>✓ Site assessment</li>
-                            <li>✓ Detailed project scoping</li>
-                            <li>✓ Material and finish discussion</li>
-                            <li>✓ Proposal preparation</li>
-                            <li>✓ Complimentary</li>
-                        </ul>
-                        <a href="/pages/contact.html" class="btn-outline-gold">Schedule Discovery</a>
+                    <!-- Project Inquiry Form -->
+                    <div class="booking-card luxury-card-gold reveal">
+                        <div class="text-center mb-6">
+                            <h3>Tell Us About Your Project</h3>
+                            <p class="text-sm">Share your details below and we'll reach out to schedule a dedicated
+                                discovery call.</p>
+                        </div>
+
+                        <form class="contact-form" id="discovery-form">
+                            <div class="form-group">
+                                <label for="name">Name</label>
+                                <input type="text" id="name" name="name" class="input-luxury-light" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="phone">Phone</label>
+                                <input type="tel" id="phone" name="phone" class="input-luxury-light" required>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="projectType">Project Type</label>
+                                <select id="projectType" name="projectType" class="input-luxury-light">
+                                    <option value="Kitchen">Kitchen Renovation</option>
+                                    <option value="Bathroom">Bathroom Remodeling</option>
+                                    <option value="Whole Home">Whole Home Transformation</option>
+                                    <option value="New Build">New Construction</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="details">Project Details</label>
+                                <textarea id="details" name="details" class="input-luxury-light" rows="3"
+                                    placeholder="Briefly describe your vision..."></textarea>
+                            </div>
+
+                            <button type="submit" class="btn-gold full-width mt-4">Submit Inquiry</button>
+                        </form>
                     </div>
 
                 </div>
