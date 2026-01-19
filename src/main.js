@@ -48,6 +48,18 @@ function initScrollReveal() {
     });
 
     reveals.forEach(el => observer.observe(el));
+
+    // Immediately check for elements already in viewport on page load
+    // This fixes the issue where content doesn't appear until scroll/interaction
+    requestAnimationFrame(() => {
+        reveals.forEach(el => {
+            const rect = el.getBoundingClientRect();
+            const inViewport = rect.top < window.innerHeight && rect.bottom >= 0;
+            if (inViewport) {
+                el.classList.add('is-visible');
+            }
+        });
+    });
 }
 
 // Body loaded class for transitions
