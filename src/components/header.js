@@ -212,14 +212,18 @@ export function injectHeaderStyles() {
       bottom: 0;
       left: 0;
       width: 0;
-      height: 1px;
+      height: 2px;
       background: var(--gold-primary);
       transition: width var(--duration-normal) var(--ease-elegant);
     }
     
-    .nav-link:hover,
-    .nav-link.is-active {
+    .nav-link:hover {
       color: var(--gold-dark);
+    }
+
+    .nav-link.is-active {
+      color: var(--gold-primary);
+      font-weight: var(--font-semibold);
     }
     
     .nav-link:hover::after,
