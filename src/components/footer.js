@@ -57,7 +57,7 @@ export function createFooter() {
               <li><a href="/pages/services.html">Bathroom Remodeling</a></li>
               <li><a href="/pages/services.html">Whole Home Design</a></li>
               <li><a href="/pages/services.html">Custom Builds</a></li>
-              <li><a href="/pages/contact.html">Consultations</a></li>
+              <li><a href="/pages/book-online.html">Consultations</a></li>
             </ul>
           </div>
           
@@ -71,7 +71,7 @@ export function createFooter() {
               </div>
               <div class="contact-item">
                 <span class="contact-label">Phone</span>
-                <a href="tel:4072880832">(407) 288-0832</a>
+                <a href="tel:4077207476">(407) 720-7476</a>
               </div>
               <div class="contact-item">
                 <span class="contact-label">Email</span>

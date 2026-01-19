@@ -30,10 +30,10 @@ export function createHeader() {
           
           <!-- CTA Buttons -->
           <div class="nav-cta hide-mobile">
-            <a href="tel:4072880832" class="nav-phone" title="Call (407) 288-0832">
+            <a href="tel:4077207476" class="nav-phone" title="Call (407) 720-7476">
               <span class="phone-icon">✆</span>
             </a>
-            <a href="/pages/contact.html" class="btn-gold">Schedule Consultation</a>
+            <a href="/pages/book-online.html" class="btn-gold">Schedule Consultation</a>
           </div>
           
           <!-- Mobile Menu Toggle -->
@@ -60,8 +60,8 @@ export function createHeader() {
           <li><a href="/pages/contact.html" class="mobile-nav-link">Contact</a></li>
         </ul>
         <div class="mobile-cta">
-          <a href="tel:4072880832" class="mobile-phone">(407) 288-0832</a>
-          <a href="/pages/contact.html" class="btn-gold">Schedule Consultation</a>
+          <a href="tel:4077207476" class="mobile-phone">(407) 720-7476</a>
+          <a href="/pages/book-online.html" class="btn-gold">Schedule Consultation</a>
         </div>
       </div>
     </div>
