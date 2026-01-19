@@ -214,7 +214,28 @@ function injectQuickCashStyles() {
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', injectQuickCashStyles);
+  document.addEventListener('DOMContentLoaded', () => {
+    injectQuickCashStyles();
+    initSmoothScroll();
+  });
 } else {
   injectQuickCashStyles();
+  initSmoothScroll();
+}
+
+// Smooth scroll for anchor links
+function initSmoothScroll() {
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const targetId = this.getAttribute('href');
+      const targetElement = document.querySelector(targetId);
+      if (targetElement) {
+        e.preventDefault();
+        targetElement.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        });
+      }
+    });
+  });
 }

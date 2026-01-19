@@ -112,7 +112,11 @@ export function initHeader() {
   const currentPath = window.location.pathname;
   document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
     const href = link.getAttribute('href');
-    if (href === currentPath || (currentPath === '/' && href === '/')) {
+    // Match exact path or if current path ends with the href (for /pages/xxx.html)
+    const isActive = href === currentPath ||
+      (currentPath !== '/' && href !== '/' && currentPath.endsWith(href)) ||
+      (currentPath === '/' && href === '/');
+    if (isActive) {
       link.classList.add('is-active');
     }
   });
