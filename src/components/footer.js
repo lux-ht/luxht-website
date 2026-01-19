@@ -57,7 +57,7 @@ export function createFooter() {
               <li><a href="/pages/services.html">Bathroom Remodeling</a></li>
               <li><a href="/pages/services.html">Whole Home Design</a></li>
               <li><a href="/pages/services.html">Custom Builds</a></li>
-              <li><a href="/pages/book-online.html">Consultations</a></li>
+              <li><a href="/pages/contact.html">Consultations</a></li>
             </ul>
           </div>
           

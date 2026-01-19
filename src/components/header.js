@@ -33,7 +33,7 @@ export function createHeader() {
             <a href="tel:4072880832" class="nav-phone" title="Call (407) 288-0832">
               <span class="phone-icon">✆</span>
             </a>
-            <a href="/pages/book-online.html" class="btn-gold">Schedule Consultation</a>
+            <a href="/pages/contact.html" class="btn-gold">Schedule Consultation</a>
           </div>
           
           <!-- Mobile Menu Toggle -->
@@ -61,7 +61,7 @@ export function createHeader() {
         </ul>
         <div class="mobile-cta">
           <a href="tel:4072880832" class="mobile-phone">(407) 288-0832</a>
-          <a href="/pages/book-online.html" class="btn-gold">Schedule Consultation</a>
+          <a href="/pages/contact.html" class="btn-gold">Schedule Consultation</a>
         </div>
       </div>
     </div>
