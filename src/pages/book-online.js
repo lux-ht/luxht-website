@@ -203,7 +203,67 @@ function injectBookingStyles() {
 }
 
 if (document.readyState === 'loading') {
-  document.addEventListener('DOMContentLoaded', injectBookingStyles);
+  document.addEventListener('DOMContentLoaded', () => {
+    injectBookingStyles();
+    initDiscoveryForm();
+  });
 } else {
   injectBookingStyles();
+  initDiscoveryForm();
+}
+
+function initDiscoveryForm() {
+  const form = document.getElementById('discovery-form');
+  if (!form) return;
+
+  // Initialize Address Autocomplete
+  import('../utils/address-autocomplete.js').then(module => {
+    module.initAddressAutocomplete('address');
+  }).catch(err => console.error('Failed to load autocomplete', err));
+
+  form.addEventListener('submit', async (e) => {
+    e.preventDefault();
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Submitting...';
+    submitBtn.disabled = true;
+
+    const formData = new FormData(form);
+    const data = Object.fromEntries(formData);
+
+    try {
+      const { supabase } = await import('../supa-client.js');
+
+      const { error } = await supabase
+        .from('leads')
+        .insert({
+          type: 'discovery',
+          name: data.name,
+          email: data.email,
+          phone: data.phone,
+          address: data.address,
+          message: data.details,
+          metadata: {
+            project_type: data.projectType
+          }
+        });
+
+      if (error) throw error;
+
+      import('../utils/modal.js').then(({ showSuccessModal }) => {
+        showSuccessModal(
+          'Inquiry Received',
+          'Thank you for choosing LUXHT. We have received your project details and will contact you shortly to schedule your consultation.',
+          () => form.reset()
+        );
+      });
+
+    } catch (error) {
+      console.error('Error submitting inquiry:', error);
+      alert('Failed to submit inquiry. Please try again or call us directly.');
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
+  });
 }

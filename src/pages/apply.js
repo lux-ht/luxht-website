@@ -3,8 +3,8 @@
  */
 
 function injectApplyStyles() {
-    const styles = document.createElement('style');
-    styles.textContent = `
+  const styles = document.createElement('style');
+  styles.textContent = `
     .page-hero {
       padding: 180px 0 80px;
     }
@@ -146,87 +146,101 @@ function injectApplyStyles() {
       }
     }
   `;
-    document.head.appendChild(styles);
+  document.head.appendChild(styles);
 }
 
 function initApplicationForm() {
-    const form = document.getElementById('applicationForm');
-    const successMessage = document.getElementById('successMessage');
+  const form = document.getElementById('applicationForm');
+  const successMessage = document.getElementById('successMessage');
 
-    if (form) {
-        form.addEventListener('submit', async function (e) {
-            e.preventDefault();
+  if (form) {
+    form.addEventListener('submit', async function (e) {
+      e.preventDefault();
 
-            const submitBtn = form.querySelector('button[type="submit"]');
-            const originalText = submitBtn.textContent;
-            submitBtn.textContent = 'Submitting...';
-            submitBtn.disabled = true;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.textContent;
+      submitBtn.textContent = 'Submitting...';
+      submitBtn.disabled = true;
 
-            // Collect form data
-            const formData = new FormData(form);
+      const formData = new FormData(form);
+      const data = Object.fromEntries(formData);
 
-            // Check if Formspree is configured
-            const formAction = form.getAttribute('action');
-            if (formAction && !formAction.includes('YOUR_FORM_ID')) {
-                // Send to Formspree
-                try {
-                    const response = await fetch(formAction, {
-                        method: 'POST',
-                        body: formData,
-                        headers: {
-                            'Accept': 'application/json'
-                        }
-                    });
+      try {
+        const { supabase } = await import('../supa-client.js');
 
-                    if (response.ok) {
-                        // Success - show message
-                        form.style.display = 'none';
-                        successMessage.style.display = 'block';
-                        successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                } catch (error) {
-                    console.error('Error:', error);
-                    alert('There was an error submitting your application. Please try again or email us directly at careers@luxht.com');
-                    submitBtn.textContent = originalText;
-                    submitBtn.disabled = false;
-                }
-            } else {
-                // Formspree not configured - show success anyway for demo
-                console.log('Application submitted:', Object.fromEntries(formData));
-                console.log('Note: Configure Formspree to receive actual emails');
-                form.style.display = 'none';
-                successMessage.style.display = 'block';
-                successMessage.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        const { error } = await supabase
+          .from('leads')
+          .insert({
+            type: 'application',
+            name: `${data.firstName} ${data.lastName}`,
+            email: data.email,
+            phone: data.phone,
+            address: data.location,
+            message: data.about,
+            metadata: {
+              position: data.position,
+              experience: data.experience,
+              resume_link: data.resume,
+              portfolio_link: data.portfolio,
+              availability: data.availability
             }
+          });
+
+        if (error) throw error;
+
+        // Success - show modal
+        import('../utils/modal.js').then(({ showSuccessModal }) => {
+          showSuccessModal(
+            'Application Received',
+            'Thank you for your interest in joining LUXHT. We have received your application and will review your qualifications shortly.',
+            () => {
+              form.reset();
+              // Original code hid form and showed message div, but modal is cleaner.
+              // If we want to persist the "Done" state on page:
+              form.style.display = 'none';
+              if (successMessage) successMessage.style.display = 'block';
+            }
+          );
         });
-    }
 
-    // Check for position parameter in URL
-    const urlParams = new URLSearchParams(window.location.search);
-    const position = urlParams.get('position');
-    if (position) {
-        const positionSelect = document.getElementById('position');
-        if (positionSelect) {
-            // Try to match the position
-            for (let option of positionSelect.options) {
-                if (option.value.toLowerCase().includes(position.toLowerCase()) ||
-                    position.toLowerCase().includes(option.value.toLowerCase())) {
-                    positionSelect.value = option.value;
-                    break;
-                }
-            }
+      } catch (error) {
+        console.error('Error:', error);
+        alert('There was an error submitting your application. Please try again or email us directly at careers@luxht.com');
+        submitBtn.textContent = originalText;
+        submitBtn.disabled = false;
+      }
+    });
+  }
+
+  // Initialize Address Autocomplete
+  import('../utils/address-autocomplete.js').then(module => {
+    module.initAddressAutocomplete('location');
+  }).catch(err => console.error('Failed to load autocomplete', err));
+
+  // Check for position parameter in URL
+  const urlParams = new URLSearchParams(window.location.search);
+  const position = urlParams.get('position');
+  if (position) {
+    const positionSelect = document.getElementById('position');
+    if (positionSelect) {
+      // Try to match the position
+      for (let option of positionSelect.options) {
+        if (option.value.toLowerCase().includes(position.toLowerCase()) ||
+          position.toLowerCase().includes(option.value.toLowerCase())) {
+          positionSelect.value = option.value;
+          break;
         }
+      }
     }
+  }
 }
 
 if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', () => {
-        injectApplyStyles();
-        initApplicationForm();
-    });
-} else {
+  document.addEventListener('DOMContentLoaded', () => {
     injectApplyStyles();
     initApplicationForm();
+  });
+} else {
+  injectApplyStyles();
+  initApplicationForm();
 }

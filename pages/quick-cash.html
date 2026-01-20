@@ -188,6 +188,12 @@
                             </div>
 
                             <div class="form-group">
+                                <label for="seller-email">Email Address *</label>
+                                <input type="email" id="seller-email" name="sellerEmail" class="input-luxury-light"
+                                    required>
+                            </div>
+
+                            <div class="form-group">
                                 <label for="property-condition">Property Condition</label>
                                 <select id="property-condition" name="propertyCondition" class="input-luxury-light">
                                     <option value="">Select condition...</option>
@@ -222,6 +228,18 @@
                                 <textarea id="property-details" name="propertyDetails" class="input-luxury-light"
                                     rows="3"
                                     placeholder="Why are you selling? Any issues with the property? Anything else we should know?"></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="property-photos" style="cursor: pointer;">
+                                    Upload Property Photos (Optional)
+                                    <span
+                                        style="display: block; font-size: 0.8em; font-weight: normal; color: var(--text-muted); text-transform: none; margin-top: 4px;">
+                                        Add photos to help us evaluate your property faster.
+                                    </span>
+                                </label>
+                                <input type="file" id="property-photos" name="propertyPhotos" class="input-luxury-light"
+                                    accept="image/*" multiple style="padding: var(--space-3);">
                             </div>
 
                             <button type="submit" class="btn-gold full-width mt-4">Get My Cash Offer</button>

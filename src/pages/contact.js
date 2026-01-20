@@ -128,22 +128,57 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   if (!form) return;
 
-  form.addEventListener('submit', (e) => {
+  // Initialize Address Autocomplete
+  import('../utils/address-autocomplete.js').then(module => {
+    module.initAddressAutocomplete('address');
+  }).catch(err => console.error('Failed to load autocomplete', err));
+
+  form.addEventListener('submit', async (e) => {
     e.preventDefault();
+
+    const submitBtn = form.querySelector('button[type="submit"]');
+    const originalText = submitBtn.textContent;
+    submitBtn.textContent = 'Sending...';
+    submitBtn.disabled = true;
 
     const formData = new FormData(form);
     const data = Object.fromEntries(formData);
 
-    const subject = encodeURIComponent(`New Consultation Request - ${data.project || 'General'}`);
-    const body = encodeURIComponent(
-      `Name: ${data.firstName} ${data.lastName}\n` +
-      `Email: ${data.email}\n` +
-      `Phone: ${data.phone || 'Not provided'}\n` +
-      `Project Type: ${data.project || 'Not specified'}\n\n` +
-      `Message:\n${data.message || 'No message'}`
-    );
+    try {
+      // Dynamic import to avoid issues if module loading fails
+      const { supabase } = await import('../supa-client.js');
 
-    window.location.href = `mailto:info@luxht.com?subject=${subject}&body=${body}`;
+      const { error } = await supabase
+        .from('leads')
+        .insert({
+          type: 'contact',
+          name: `${data.firstName} ${data.lastName}`,
+          email: data.email,
+          address: data.address,
+          phone: data.phone,
+          message: data.message,
+          metadata: { project_type: data.project }
+        });
+
+      if (error) throw error;
+
+      // SUCCESS: Use new Modal
+      import('../utils/modal.js').then(({ showSuccessModal }) => {
+        showSuccessModal(
+          'Message Sent',
+          'Thank you for contacting LUXHT. We have received your message and will be in touch shortly.',
+          () => {
+            form.reset();
+          }
+        );
+      });
+    } catch (error) {
+      console.error('Error submitting form:', error);
+      alert('Failed to send message. Please try again or email us directly.');
+    } finally {
+      submitBtn.textContent = originalText;
+      submitBtn.disabled = false;
+    }
   });
 }
 
