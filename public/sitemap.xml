@@ -1,51 +1,168 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <!-- Homepage -->
   <url>
     <loc>https://luxht.com/</loc>
-    <lastmod>2026-01-10</lastmod>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
+
+  <!-- Core Pages -->
   <url>
-    <loc>https://luxht.com/pages/services.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>https://luxht.com/pages/services</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://luxht.com/pages/quick-cash.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>https://luxht.com/pages/quick-cash</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://luxht.com/pages/projects.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>https://luxht.com/pages/projects</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://luxht.com/pages/about-us.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>https://luxht.com/pages/about-us</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
-    <loc>https://luxht.com/pages/contact.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>https://luxht.com/pages/contact</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://luxht.com/pages/book-online.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>https://luxht.com/pages/book-online</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
   <url>
-    <loc>https://luxht.com/pages/careers.html</loc>
-    <lastmod>2026-01-10</lastmod>
+    <loc>https://luxht.com/pages/careers</loc>
+    <lastmod>2026-02-12</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/apply</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.5</priority>
+  </url>
+
+  <!-- Insights Hub -->
+  <url>
+    <loc>https://luxht.com/pages/insights</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Insight Articles -->
+  <url>
+    <loc>https://luxht.com/pages/insights/increase-home-value</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/energy-efficiency</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/kitchen-roi</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/before-you-buy</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/before-you-sell</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/renovation-timeline</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/bathroom-upgrades</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/hurricane-preparedness</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/hurricane-windows</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/florida-moisture-control</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/flood-prevention</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/florida-summer-home-tips</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/florida-outdoor-living</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/insights/florida-home-maintenance</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://luxht.com/pages/privacy</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+  <url>
+    <loc>https://luxht.com/pages/terms</loc>
+    <lastmod>2026-02-12</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
   </url>
 </urlset>

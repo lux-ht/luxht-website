@@ -41,11 +41,11 @@ export function createFooter() {
             <h4 class="footer-heading">Navigation</h4>
             <ul class="footer-links">
               <li><a href="/">Home</a></li>
-              <li><a href="/pages/services.html">Services</a></li>
-              <li><a href="/pages/projects.html">Portfolio</a></li>
-              <li><a href="/pages/about-us.html">About Us</a></li>
-              <li><a href="/pages/insights.html">Insights</a></li>
-              <li><a href="/pages/careers.html">Careers</a></li>
+              <li><a href="/pages/services">Services</a></li>
+              <li><a href="/pages/projects">Portfolio</a></li>
+              <li><a href="/pages/about-us">About Us</a></li>
+              <li><a href="/pages/insights">Insights</a></li>
+              <li><a href="/pages/careers">Careers</a></li>
             </ul>
           </div>
           
@@ -53,11 +53,11 @@ export function createFooter() {
           <div class="footer-links-col">
             <h4 class="footer-heading">Services</h4>
             <ul class="footer-links">
-              <li><a href="/pages/services.html">Kitchen Renovations</a></li>
-              <li><a href="/pages/services.html">Bathroom Remodeling</a></li>
-              <li><a href="/pages/services.html">Whole Home Design</a></li>
-              <li><a href="/pages/services.html">Custom Builds</a></li>
-              <li><a href="/pages/book-online.html">Consultations</a></li>
+              <li><a href="/pages/services">Kitchen Renovations</a></li>
+              <li><a href="/pages/services">Bathroom Remodeling</a></li>
+              <li><a href="/pages/services">Whole Home Design</a></li>
+              <li><a href="/pages/services">Custom Builds</a></li>
+              <li><a href="/pages/book-online">Consultations</a></li>
             </ul>
           </div>
           
@@ -91,8 +91,8 @@ export function createFooter() {
         <div class="footer-bottom-inner">
           <p class="copyright">© ${currentYear} Luxury Home Transformations. All rights reserved.</p>
           <div class="footer-legal">
-            <a href="/pages/privacy.html">Privacy Policy</a>
-            <a href="/pages/terms.html">Terms of Service</a>
+            <a href="/pages/privacy">Privacy Policy</a>
+            <a href="/pages/terms">Terms of Service</a>
           </div>
         </div>
       </div>

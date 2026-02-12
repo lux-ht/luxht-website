@@ -20,12 +20,12 @@ export function createHeader() {
           <!-- Desktop Navigation -->
           <ul class="nav-links hide-mobile">
             <li><a href="/" class="nav-link">Home</a></li>
-            <li><a href="/pages/services.html" class="nav-link">Services</a></li>
-            <li><a href="/pages/quick-cash.html" class="nav-link">We Buy</a></li>
-            <li><a href="/pages/projects.html" class="nav-link">Portfolio</a></li>
-            <li><a href="/pages/insights.html" class="nav-link">Insights</a></li>
-            <li><a href="/pages/about-us.html" class="nav-link">About</a></li>
-            <li><a href="/pages/contact.html" class="nav-link">Contact</a></li>
+            <li><a href="/pages/services" class="nav-link">Services</a></li>
+            <li><a href="/pages/quick-cash" class="nav-link">We Buy</a></li>
+            <li><a href="/pages/projects" class="nav-link">Portfolio</a></li>
+            <li><a href="/pages/insights" class="nav-link">Insights</a></li>
+            <li><a href="/pages/about-us" class="nav-link">About</a></li>
+            <li><a href="/pages/contact" class="nav-link">Contact</a></li>
           </ul>
           
           <!-- CTA Buttons -->
@@ -33,7 +33,7 @@ export function createHeader() {
             <a href="tel:4077207476" class="nav-phone" title="Call (407) 720-7476">
               <span class="phone-icon">✆</span>
             </a>
-            <a href="/pages/book-online.html" class="btn-gold">Request Consultation</a>
+            <a href="/pages/book-online" class="btn-gold">Request Consultation</a>
           </div>
           
           <!-- Mobile Menu Toggle -->
@@ -51,17 +51,17 @@ export function createHeader() {
       <div class="mobile-menu-inner">
         <ul class="mobile-nav-links">
           <li><a href="/" class="mobile-nav-link">Home</a></li>
-          <li><a href="/pages/services.html" class="mobile-nav-link">Services</a></li>
-          <li><a href="/pages/quick-cash.html" class="mobile-nav-link">We Buy</a></li>
-          <li><a href="/pages/projects.html" class="mobile-nav-link">Portfolio</a></li>
-          <li><a href="/pages/insights.html" class="mobile-nav-link">Insights</a></li>
-          <li><a href="/pages/about-us.html" class="mobile-nav-link">About</a></li>
-          <li><a href="/pages/careers.html" class="mobile-nav-link">Careers</a></li>
-          <li><a href="/pages/contact.html" class="mobile-nav-link">Contact</a></li>
+          <li><a href="/pages/services" class="mobile-nav-link">Services</a></li>
+          <li><a href="/pages/quick-cash" class="mobile-nav-link">We Buy</a></li>
+          <li><a href="/pages/projects" class="mobile-nav-link">Portfolio</a></li>
+          <li><a href="/pages/insights" class="mobile-nav-link">Insights</a></li>
+          <li><a href="/pages/about-us" class="mobile-nav-link">About</a></li>
+          <li><a href="/pages/careers" class="mobile-nav-link">Careers</a></li>
+          <li><a href="/pages/contact" class="mobile-nav-link">Contact</a></li>
         </ul>
         <div class="mobile-cta">
           <a href="tel:4077207476" class="mobile-phone">(407) 720-7476</a>
-          <a href="/pages/book-online.html" class="btn-gold">Request Consultation</a>
+          <a href="/pages/book-online" class="btn-gold">Request Consultation</a>
         </div>
       </div>
     </div>
@@ -112,7 +112,7 @@ export function initHeader() {
   const currentPath = window.location.pathname;
   document.querySelectorAll('.nav-link, .mobile-nav-link').forEach(link => {
     const href = link.getAttribute('href');
-    // Match exact path or if current path ends with the href (for /pages/xxx.html)
+    // Match exact path or if current path ends with the href (for /pages/xxx)
     const isActive = href === currentPath ||
       (currentPath !== '/' && href !== '/' && currentPath.endsWith(href)) ||
       (currentPath === '/' && href === '/');
