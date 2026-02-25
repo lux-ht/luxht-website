@@ -89,7 +89,7 @@ export function createFooter() {
     <div class="footer-bottom">
       <div class="container">
         <div class="footer-bottom-inner">
-          <p class="copyright">© ${currentYear} Luxury Home Transformations. All rights reserved.</p>
+          <p class="copyright">© ${currentYear} LUXHT — Luxury Home Transformations. All rights reserved.</p>
           <div class="footer-legal">
             <a href="/pages/privacy">Privacy Policy</a>
             <a href="/pages/terms">Terms of Service</a>

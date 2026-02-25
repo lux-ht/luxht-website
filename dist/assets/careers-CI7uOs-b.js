@@ -1,5 +1,4 @@
-import"./main-D9CxFDMg.js";function a(){const e=document.createElement("style");e.textContent=`
-    /* Page Hero */
+import"./main-1vjkZQqu.js";function a(){const e=document.createElement("style");e.textContent=`
     .page-hero {
       padding: 180px 0 80px;
     }
@@ -15,70 +14,61 @@ import"./main-D9CxFDMg.js";function a(){const e=document.createElement("style");
       margin-right: auto;
     }
     
-    /* Service Detail Cards */
-    .services-detail-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: var(--space-8);
-    }
-    
-    .service-detail-card {
-      padding: var(--space-10);
-    }
-    
-    .service-number {
-      font-family: var(--font-display);
-      font-size: var(--text-4xl);
+    .why-join-content h2 {
       margin-bottom: var(--space-4);
     }
     
-    .service-detail-card h3 {
-      margin-bottom: var(--space-4);
+    .benefit-item {
+      padding: var(--space-6);
     }
     
-    .service-detail-card p {
-      margin-bottom: var(--space-6);
-      max-width: none;
+    .benefit-icon {
+      font-size: var(--text-2xl);
+      margin-bottom: var(--space-3);
     }
     
-    .service-features {
-      display: flex;
-      flex-direction: column;
-      gap: var(--space-2);
-    }
-    
-    .service-features li {
-      font-size: var(--text-sm);
-      color: var(--text-muted);
-      padding-left: var(--space-4);
-      position: relative;
-    }
-    
-    .service-features li::before {
-      content: '—';
-      position: absolute;
-      left: 0;
-      color: var(--gold-primary);
-    }
-    
-    /* Process Steps */
-    .step-number {
-      font-family: var(--font-display);
-      font-size: var(--text-5xl);
-      margin-bottom: var(--space-4);
-    }
-    
-    .process-step h4 {
+    .benefit-item h4 {
       margin-bottom: var(--space-2);
     }
     
-    .process-step p {
+    .benefit-item p {
       font-size: var(--text-sm);
       color: var(--text-muted);
       max-width: none;
     }
     
-    /* CTA */
+    .positions-grid {
+      display: flex;
+      flex-direction: column;
+      gap: var(--space-6);
+    }
+    
+    .position-card {
+      padding: var(--space-8);
+    }
+    
+    .position-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: var(--space-6);
+      margin-bottom: var(--space-4);
+      flex-wrap: wrap;
+    }
+    
+    .position-header h3 {
+      margin-bottom: var(--space-1);
+    }
+    
+    .position-type {
+      font-size: var(--text-sm);
+      color: var(--text-muted);
+    }
+    
+    .position-card > p {
+      max-width: none;
+    }
+    
     .cta-card {
       padding: var(--space-20) var(--space-8);
     }
@@ -104,8 +94,8 @@ import"./main-D9CxFDMg.js";function a(){const e=document.createElement("style");
         padding: 140px 0 60px;
       }
       
-      .services-detail-grid {
-        grid-template-columns: 1fr;
+      .position-header {
+        flex-direction: column;
       }
       
       .cta-card {
