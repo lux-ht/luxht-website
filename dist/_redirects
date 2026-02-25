@@ -1,0 +1,11 @@
+# Cloudflare Pages Redirects
+# Enforce HTTPS and non-www canonical domain
+
+# www to non-www (HTTPS)
+https://www.luxht.com/* https://luxht.com/:splat 301
+
+# www to non-www (HTTP)  
+http://www.luxht.com/* https://luxht.com/:splat 301
+
+# HTTP to HTTPS (non-www)
+http://luxht.com/* https://luxht.com/:splat 301
